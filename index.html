@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Volunteer Form</title>
+		<style>
+		.box {
+			border: 1px solid #444;
+			background-color: white;
+			margin: 20px 20px;
+			padding: 5px 20px;
+		}
+	</style>
+</head>
+<body>
+		<h2>Volunteer Form</h2>
+		<p><strong>My Info</strong></p>
+		<form action="action_page.php" method="GET">
+	<div class="box">
+	<h2></h2>
+        <p><strong>First Name:</strong><input type="text" name="name" id="textfield" style="border:none;border-bottom:1px solid #000;"><?php echo htmlentities($firstName) ?></p>
+		<p><strong>Last Name:</strong> <input type="text" name="name" id="textfield" style="border:none;border-bottom:1px solid #000;"><?php echo htmlentities($lastName) ?></p>
+		<p><strong>Phone Number:</strong> <input type="text" name="number" id="textfield" style="border:none;border-bottom:1px solid #000;"><?php echo htmlentities($phone) ?></p>
+		<p><strong>Email Address:</strong> <input type="text" name="name" id="textfield" style="border:none;border-bottom:1px solid #000;"><?php echo htmlentities($email) ?></p>
+		<p><strong>Gender:</strong><strong><?php echo htmlentities($gender) ?></p>
+		<form>
+       <input type="radio" name="sex" value="male">Male<br>
+       <input type="radio" name="sex" value="female">Female
+       </form>
+        <p><strong>Age:</strong><?php echo htmlentities($age) ?></p>
+		<input type="radio" name="age" value="under 18"><strong>under 18</strong><br>
+		<input type="radio" name="age" value="18 - 24"><strong>18-24</strong><br>
+		<input type="radio" name="age" value="25 - 34"><strong>25-34</strong><br>
+		<input type="radio" name="age" value="35- 44"><strong>35-44</strong><br>
+		<input type="radio" name="age" value="45 - 54"><strong>45-54</strong><br>
+		<input type="radio" name="age" value="55 - 64"><strong>55-64</strong><br>
+		<input type="radio" name="age" value="65 and over"><strong>65 and over</strong><br>
+	</div>
+	<h3></h3>
+	<p><strong>My Availablity<strong></p>
+	<label>My Availablity </label>
+        </p>
+        <ul style="list-style-type:none">
+          <li>
+          <input type="checkbox" name="available_field[]" value="Sunday"> Sunday
+          </li>
+          <li>
+          <label><input type="checkbox" name="available_field[]" value="Monday"> Monday</label>
+          </li>
+          <li>
+          <label><input type="checkbox" name="available_field[]" value="Tuesday"> Tuesday</label>
+          </li>
+          <li>
+          <label><input type="checkbox" name="available_field[]" value="Wednesday"> Wednesday</label>
+          </li>
+          <li>
+          <label><input type="checkbox" name="available_field[]" value="Thursday"> Thursday</label>
+          </li>
+          <li>
+          <label><input type="checkbox" name="available_field[]" value="Friday"> Friday</label>
+          </li>
+          <li>
+          <label><input type="checkbox" name="available_field[]" value="Saturday"> Saturday</label>
+          </li>
+        </ul>
+        </p>
+	
+	<h2>Any Comments?</h2>
+	 <textarea cols="30" rows="10" name="comments_field"></textarea>
+</body>
+<form><input type="submit" value="Submit"></form>
+</html>
